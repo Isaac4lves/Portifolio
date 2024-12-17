@@ -57,7 +57,10 @@ b#nda {
     color: aliceblue;
 }
 
+
+
 p {
+    position: relative;
     font-size: large;
     letter-spacing: 1.5px;
     margin-left: 35px;
@@ -69,7 +72,8 @@ p {
 }
 #Aboutme p {
     font-size: 130%;
-    width: 760px;
+    position: relative;
+
 
 }
 .title{
@@ -98,7 +102,8 @@ p {
     z-index: 0;
 }
 #image{
-    position: absolute;
+    position: relative;
+    left: 30px;
     width: 410px;
     right: 60px;
     top: 109%;
@@ -216,3 +221,49 @@ header nav{
     color: rgb(255, 239, 92);
 }
 
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: medium;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    .hello #top{
+        font-size: 50px;
+    }
+    .hello #down{
+        top: 20px;
+        font-size: 25px;
+    }
+
+    #image {
+        width: 350px;
+    }
+
+    .sobre p {
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+    }
+
+    .email a {
+        font-size: 20px;
+        top: -30px;
+        left: 50px;
+    }
+    #contato img {
+        width: 30px;
+    }
+}
+
+
+@media screen and (max-width: 1994px) {
+    #contato img {
+        width: 30px;
+    }
+}
+@media screen and (max-width: 1929px) {
+    #contato img {
+        width: 30px;
+    }
+}
