@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    margin: 0;
+    background-color: #1a1b1c;
+    font-family: "Kanit", sans-serif;
+    color: aliceblue;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+
+header .fundo {
+    position: relative;
+    top: -33px;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+}
+
+.hello {
+    color: aliceblue;
+    text-align: center;
+    z-index: 1;
+}
+
+.hello #top {
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.hello #down {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0;
+    margin-top: -20px;
+}
+
+.hello #top b {
+    color: rgb(255, 240, 103);
+}
+b {
+    color:  rgb(225, 208, 53);
+}
+
+b#nda {
+    color: aliceblue;
+}
+
+p {
+    font-size: large;
+    letter-spacing: 1.5px;
+    margin-left: 35px;
+}
+
+#Aboutme {
+    border-bottom: 12px;
+    background-color: #1d1e20;
+}
+#Aboutme p {
+    font-size: 130%;
+    width: 760px;
+
+}
+.title{
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.title::before{
+    font-weight: 300;
+    font-weight: 350;
+    content: "# ";
+    opacity: 0.5;
+}
+
+.front img {
+    filter: blur(2px);
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 140%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+#image{
+    position: absolute;
+    width: 410px;
+    right: 60px;
+    top: 109%;
+}
+
+#contateme{
+    color: rgb(248, 243, 169);
+}
+
+#icon{
+    width: 21px;
+}
+
+
+header{
+    position:fixed;
+    z-index: 2;
+    color: aliceblue;
+    border: 0;
+}
+header nav{
+    background-color: #1a1b1c;
+}
+
+.nav-link{
+    color: aliceblue;
+}
+.nav-link:hover{
+    color: rgb(255, 240, 103);
+}
+.nav-link.active {
+    border-bottom: 2px solid rgb(255, 240, 103); 
+}
+
+.projetos-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    position: relative;
+    padding: 12px 10px;
+    background-color:aliceblue;
+    margin: 20px;
+    justify-content: center;
+}
+.card-body{
+    text-align: left;
+}
+.card-body p{
+    margin: 0px;
+    margin-top: 5px;
+    text-align: center;
+}
+.card-body h5{
+    margin: 0px;
+    text-align: center;
+}
+
+.card:hover .card-img-top {
+    filter: blur(2px);
+}
+.card:hover .btn {
+    display: flex;
+}
+
+.btn{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    left: 26%;
+}
+.btn button {
+    border-radius: 50%;
+    background:none;
+    border: none;
+}
+.btn button#github:hover img#Github {
+    transform: scale(1.1);
+}
+.btn button#site:hover img#Site {
+    transform: scale(1.1);
+}
+.btn button span {
+    left: 20px;
+}
+.btn img {
+    width: 50px;
+}
+.btn img#Site {
+    width: 50px;
+}
+
+.email {
+    margin: 20px;
+    /* border: solid rgb(255, 240, 103); */
+    width: 31%;
+}
+.email img{
+    width: 50px;
+    margin-left:12px;
+    margin-right:12px;
+
+}
+.email a {
+    position: relative;
+    top: 3px;
+    font-size: 25px;
+
+    text-decoration: none;
+    color: aliceblue;
+}
+.email a:hover{
+    color: rgb(255, 239, 92);
+}
+
