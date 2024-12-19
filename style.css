@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     background-color: #1a1b1c;
     font-family: "Kanit", sans-serif;
@@ -41,7 +44,7 @@ p {
 }
 
 #icon {
-    width: 21px;
+    width: 26px;
 }
 
 
@@ -126,102 +129,122 @@ header {
 
 /* SOBRE MIM */
 #Aboutme {
+    display: flex;
     border-bottom: 12px;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+    margin: 5%;
+
     background-color: #1d1e20;
 
     & p {
+        position: relative;
         font-size: 145%;
         font-weight: 300;
-        position: relative;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
     
+    & .img {
+        position: relative;
+        margin-right: 30px;
+    }
+
     & #image {
         position: relative;
-        left: 30px;
         width: 410px;
-        right: 60px;
         top: 109%;
+        margin-left: 32px;
+    }
+} 
+
+.skills {
+    text-align: center;
+    width: 90%;
+    margin: 5%;
+    background-color: #1d1e20;
+
+    & .title {
+        position: relative;
+        top: 12px;
+        margin: 20px;
+    }
+}
+
+.skills-body {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+        
+    & .languages {
+        display: flex;
+        flex-direction: row; 
+        gap: 12px; 
+    }
+
+    & .language-item {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        margin: 12px;
+    }
+
+    & .language-item img {
+        width: 80px; 
+        height: auto;
+    }
+
+    & .language-item p {
+        margin: 8px 0 0;
+        font-size: 22px; 
     }
 }
 
 /* PROJETOS */
 #project {
+    display: flex;
+    flex-direction: column;
 
-    & .projetos-cards {
-        display: flex;
-        justify-content: space-around;
+    .img-fluid{
+        width: 100%;
+        margin: 20px;
+    }
+
+    & button {
+        font-size: 18px;
+        margin: 14px;
+    }
+    & button:hover {
+        transform: scale(1.1);
     }
 
     & .card {
-        position: relative;
-        padding: 12px 10px;
-        background-color: aliceblue;
-        margin: 20px;
-        justify-content: center;
+        color: aliceblue;
+        background-color: #2c2e31;
+        margin: 30px;
     }
-
-    & .card-body {
-        text-align: left;
-    }
-
-    & .card-body p {
-        margin: 0px;
-        margin-top: 5px;
-        text-align: center;
-    }
-    & .card-body h5 {
-        margin: 0px;
-        text-align: center;
-    }
-    
-    & .card:hover .card-img-top {
-        filter: blur(2px);
-    }
-    
-    & .card:hover .btn {
+    & .card-header {
         display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    & .card-body {
+        margin: 20px;
     }
     
-    & .btn {
-        display: none;
-        position: absolute;
-        z-index: 2;
-        top: 30%;
-        left: 26%;
-    }
-    
-    & .btn button {
-        border-radius: 50%;
-        background: none;
-        border: none;
-    }
-    
-    & .btn button#github:hover img#Github {
-        transform: scale(1.1);
-    }
-    
-    & .btn button#site:hover img#Site {
-        transform: scale(1.1);
-    }
-    
-    & .btn button span {
-        left: 20px;
-    }
-    
-    & .btn img {
-        width: 50px;
-    }
-    
-    &.btn img#Site {
-        width: 50px;
+    & .icon {
+        top: -20px;
+        margin-left: auto;
     }
 
 }
 
 /* CONTATO */
-.email {
+#contato {
     margin: 20px;
-    /* border: solid rgb(255, 240, 103); */
     width: 31%;
     
     & img {
@@ -255,11 +278,15 @@ header {
         font-size: 23px !important;
     }
 
-    #image {
-        width: 350px !important;
+    #Aboutme {
+        font-size: small;
     }
 
-}
+    #image {
+        width: 337px !important;
+    }
+
+} 
 
 @media screen and (max-width: 600px) {
     body {
@@ -277,35 +304,75 @@ header {
         font-size: 25px;
     }
 
-    #image {
-        width: 350px;
-    }
-
     .sobre p {
         white-space: normal !important;
         overflow-wrap: break-word !important;
         word-break: break-word !important;
     }
 
-    .email a {
-        font-size: 20px;
-        top: -30px;
-        left: 50px;
+    #Aboutme {
+        flex-direction: column;
+
+        #img {
+            position: relative;
+            width: 333px;
+        }
     }
 
-    #contato img {
-        width: 30px;
+    .language-item img {
+        height: auto;
     }
+    
+    #contato {
+        width: 60%;
+        
+        & .title {
+            width: auto;
+        }
+        & a {
+            font-size: 20px;
+            left: 0px;
+        }
+        & img {
+            width: 30px;
+        }
+        & .email {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .card{
+        & img {
+            margin: 0;
+            width: auto;
+        }
+        & .col-md-3 {
+            position: relative;
+            width: 90%;
+            border-right: 50px;
+        }
+        & .col-md-8 {
+            margin-top: 0 !important;
+        }
+        & .card-body {
+            margin: 0 !important;
+            & p {
+                font-size: medium;
+                margin-top: -10px;
+                margin-left: 12px;
+                text-align: left;
+            }
+            & button {
+                margin: 12px !important;
+                align-items: center;
+            }
+        }
+        & .card-header {
+            margin: 0;
+            
+        }
+    }
+
 }
 
-@media screen and (max-width: 1994px) {
-    #contato img {
-        width: 30px;
-    }
-}
-
-@media screen and (max-width: 1929px) {
-    #contato img {
-        width: 30px;
-    }
-}
