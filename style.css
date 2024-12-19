@@ -275,23 +275,6 @@ header {
 
 /* RESPONSIVIDADE */
 
-@media screen and (max-width:500px) {
-
-    .hello #down {
-        top: 20px;
-        font-size: 23px !important;
-    }
-
-    #Aboutme {
-        font-size: small;
-    }
-
-    #image {
-        width: 337px !important;
-    }
-
-} 
-
 @media screen and (max-width: 600px) {
     body {
         font-size: medium;
@@ -390,4 +373,70 @@ header {
     }
 
 }
+
+@media screen and (max-width:500px) {
+
+    .hello #down {
+        top: 20px;
+        font-size: 23px !important;
+    }
+
+    #Aboutme {
+        font-size: small;
+    }
+
+    #image {
+        width: 337px !important;
+        margin-bottom: 20px;
+    }
+
+} 
+
+@media screen and (max-width:384px) {
+    #image {
+        transform: scale(0.9);
+        /* width: 286px !important; */
+        margin-bottom: 20px;
+    }
+
+    #contato h1 {
+        font-size: xx-large;
+        margin-left: 12px;
+    }
+    .title {
+        font-size: xx-large;
+    }
+    
+    .front img{
+        width: 139%;
+        overflow-y:visible;
+    }
+}
+
+
+@media screen and (max-width:360px) {
+    #image {
+        transform: scale(0.9);
+        /* width: 286px !important; */
+        margin-bottom: 20px;
+    }
+
+    #contato h1 {
+        font-size: xx-large;
+        margin-left: 12px;
+    }
+    .title {
+        font-size: xx-large;
+    }
+    
+    .front img{
+        width: 142.3%;
+        overflow-y:visible;
+    }
+
+}
+
+
+
+
 
