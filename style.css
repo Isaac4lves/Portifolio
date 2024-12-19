@@ -318,9 +318,20 @@ header {
             width: 333px;
         }
     }
+    .skills-body {
+        display: flex;
 
+        gap: 0;
+        & .languages {
+            flex-direction: column;
+        }
+        & .language-item {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
     .language-item img {
-        height: auto;
+        height: 12px;
     }
     
     #contato {
