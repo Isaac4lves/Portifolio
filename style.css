@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900display=swap');
 
 body {
     height: 100%;
@@ -55,7 +55,7 @@ header {
     color: aliceblue;
     border: 0;
 
-    & .fundo {
+     .fundo {
         position: relative;
         top: -33px;
         width: 100%;
@@ -63,19 +63,19 @@ header {
         filter: blur(3px);
     }
 
-    & nav {
+     nav {
         background-color: #1a1b1c;
     }
 
-    & .nav-link {
+     .nav-link {
         color: aliceblue;
     }
 
-    & .nav-link:hover {
+     .nav-link:hover {
         color: rgb(255, 240, 103);
     }
 
-    & .nav-link.active {
+     .nav-link.active {
         border-bottom: 2px solid rgb(255, 240, 103);
     }
     
@@ -91,30 +91,30 @@ header {
     background-color: black;
     position: relative;
 
-    & .hello {
+     .hello {
         color: aliceblue;
         text-align: center;
         z-index: 1;
     }
 
-    & .hello #top {
+     .hello #top {
         font-size: 60px;
         font-weight: 400;
         margin: 0;
     }
 
-    & .hello #down {
+     .hello #down {
         font-size: 30px;
         font-weight: 300;
         margin: 0;
         margin-top: -20px;
     }
 
-    & .hello #top b {
+     .hello #top b {
         color: rgb(255, 240, 103);
     }
 
-    & img {
+     img {
         filter: blur(2px);
         opacity: 0.3;
         position: absolute;
@@ -138,7 +138,7 @@ header {
 
     background-color: #1d1e20;
 
-    & p {
+     p {
         position: relative;
         font-size: 145%;
         font-weight: 300;
@@ -147,12 +147,12 @@ header {
         word-break: break-word;
     }
     
-    & .img {
+     .img {
         position: relative;
         margin-right: 30px;
     }
 
-    & #image {
+     #image {
         position: relative;
         width: 410px;
         top: 109%;
@@ -166,7 +166,7 @@ header {
     margin: 5%;
     background-color: #1d1e20;
 
-    & .title {
+     .title {
         position: relative;
         top: 12px;
         margin: 20px;
@@ -178,13 +178,13 @@ header {
     justify-content: center; 
     gap: 30px; 
         
-    & .languages {
+     .languages {
         display: flex;
         flex-direction: row; 
         gap: 12px; 
     }
 
-    & .language-item {
+     .language-item {
         display: flex;
         flex-direction: column; 
         align-items: center; 
@@ -192,12 +192,12 @@ header {
         margin: 12px;
     }
 
-    & .language-item img {
+     .language-item img {
         width: 80px; 
         height: auto;
     }
 
-    & .language-item p {
+     .language-item p {
         margin: 8px 0 0;
         font-size: 22px; 
     }
@@ -211,31 +211,32 @@ header {
     .img-fluid{
         width: 100%;
         margin: 20px;
+        margin-bottom: 0;
     }
 
-    & button {
+     button {
         font-size: 18px;
         margin: 14px;
     }
-    & button:hover {
+     button:hover {
         transform: scale(1.1);
     }
 
-    & .card {
+     .card {
         color: aliceblue;
         background-color: #2c2e31;
         margin: 30px;
     }
-    & .card-header {
+     .card-header {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    & .card-body {
+     .card-body {
         margin: 20px;
     }
     
-    & .icon {
+     .icon {
         top: -20px;
         margin-left: auto;
     }
@@ -247,13 +248,13 @@ header {
     margin: 20px;
     width: 31%;
     
-    & img {
+     img {
         width: 50px;
         margin-left: 12px;
         margin-right: 12px;
     }
 
-    & a {
+     a {
         position: relative;
         top: 3px;
         font-size: 25px;
@@ -262,7 +263,7 @@ header {
         color: aliceblue;
     }
     
-    & a:hover {
+     a:hover {
         color: rgb(255, 239, 92);
     }
 
@@ -309,10 +310,10 @@ header {
         display: flex;
 
         gap: 0;
-        & .languages {
+         .languages {
             flex-direction: column;
         }
-        & .language-item {
+         .language-item {
             flex-direction: row;
             gap: 20px;
         }
@@ -324,49 +325,49 @@ header {
     #contato {
         width: 60%;
         
-        & .title {
+         .title {
             width: auto;
         }
-        & a {
+         a {
             font-size: 20px;
             left: 0px;
         }
-        & img {
+         img {
             width: 30px;
         }
-        & .email {
+         .email {
             display: flex;
             flex-direction: row;
         }
     }
 
     .card{
-        & img {
+         img {
             margin: 0;
             width: auto;
         }
-        & .col-md-3 {
+         .col-md-3 {
             position: relative;
             width: 90%;
             border-right: 50px;
         }
-        & .col-md-8 {
+         .col-md-8 {
             margin-top: 0 !important;
         }
-        & .card-body {
+         .card-body {
             margin: 0 !important;
-            & p {
+             p {
                 font-size: medium;
                 margin-top: -10px;
                 margin-left: 12px;
                 text-align: left;
             }
-            & button {
+             button {
                 margin: 12px !important;
                 align-items: center;
             }
         }
-        & .card-header {
+         .card-header {
             margin: 0;
             
         }
