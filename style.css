@@ -46,7 +46,9 @@ p {
 #icon {
     width: 26px;
 }
-
+#icon.golang {
+    width: 32px;
+}
 
 /* NAV */
 header {
@@ -254,15 +256,15 @@ header {
     margin: 20px;
     width: 31%;
     
-     img {
-        width: 50px;
+    img {
+        width: 35px;
         margin-left: 12px;
         margin-right: 12px;
     }
 
-     a {
+    a {
         position: relative;
-        top: 3px;
+        top: 5px;
         font-size: 25px;
     
         text-decoration: none;
