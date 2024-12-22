@@ -55,6 +55,7 @@ header {
     display: flex;
     flex-direction: row;
     position: fixed;
+    margin-top: 10px;
     z-index: 2;
 
     color: aliceblue;
@@ -212,43 +213,44 @@ header {
 }
 
 /* PROJETOS */
-#project {
+.projetos {
     display: flex;
-    flex-direction: column;
-
-    .img-fluid{
-        width: 100%;
-        margin: 20px;
-        margin-bottom: 0;
-    }
-
-     button {
-        font-size: 18px;
-        margin: 14px;
-    }
-     button:hover {
-        transform: scale(1.1);
-    }
-
-     .card {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px;
+    
+    .card {
+        background-color: #2f3237;
         color: aliceblue;
-        background-color: #2c2e31;
-        margin: 30px;
+        width: 25rem;
     }
-     .card-header {
+    .card-header {
         display: flex;
         flex-direction: row;
-        align-items: center;
     }
-     .card-body {
-        margin: 20px;
-    }
-    
-     .icon {
-        top: -20px;
+    .icon {
         margin-left: auto;
     }
-
+    .card-text {
+        font-family: "Kanit", sans-serif;
+        margin: 10px;
+        font-size: medium;
+        width: 100%;
+    }
+    
+    button {
+        padding: 10px 10px;
+        font-size: medium;
+        margin: 15px;
+        justify-content: space-between;
+    }
+    .botoes {
+        position: relative;
+        top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 /* CONTATO */
@@ -283,7 +285,11 @@ header {
 
 
 /* RESPONSIVIDADE */
-
+@media screen and (max-width: 914px) {
+    .projetos {
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 600px) {
     body {
         font-size: medium;
@@ -348,9 +354,14 @@ header {
             flex-direction: row;
         }
     }
-
-    .card{
-         img {
+    .projetos {
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 86px;
+    }
+    .card{        
+        width: 20rem !important;
+        img {
             margin: 0;
             width: auto;
         }
@@ -380,6 +391,14 @@ header {
             
         }
     }
+    
+    .projetos {
+        margin-left: 49px;
+        .card-text {
+            top: 13px;
+            width: 100%;
+        }
+    }
 
 }
 
@@ -398,6 +417,8 @@ header {
         width: 337px !important;
         margin-bottom: 20px;
     }
+
+    
 
 } 
 
@@ -419,6 +440,14 @@ header {
     .front img{
         width: 139%;
         overflow-y:visible;
+    }
+    
+    .projetos {
+        margin-left: 33.5px;
+    }
+    
+    button {
+        font-size: small;
     }
 }
 
@@ -444,6 +473,10 @@ header {
     .front img{
         width: 142.3%;
         overflow-y:visible;
+    }
+    
+    .projetos {
+        margin-left: 21.3px;
     }
 
 }
