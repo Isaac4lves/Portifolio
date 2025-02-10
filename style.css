@@ -1,487 +1,218 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
-body {
+body, html {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    /* background-color: #111111; */
+}
+.container {
+    box-sizing: border-box; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px !important;
     height: 100%;
+    gap: 1.5rem;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+.skills {
+    margin-bottom: 20px;
+}
+.about {
     display: flex;
+    background-color: var(--bs-body-color-rgb);
     flex-direction: column;
-    margin: 0;
-    background-color: #1a1b1c;
-    font-family: "Kanit", sans-serif;
-    color: aliceblue;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-/* OUTROS */
-b {
-    color: rgb(225, 208, 53);
-}
-
-b#nda {
-    color: aliceblue;
-}
-
-p {
-    position: relative;
-    font-size: large;
-    letter-spacing: 1.5px;
-    margin-left: 35px;
-}
-
-.title {
-    font-weight: 300;
-    font-size: 40px;
-    letter-spacing: 3px;
-    margin-top: 50px;
-    margin-left: 30px;
-}
-
-.title::before {
-    font-weight: 300;
-    font-weight: 350;
-    content: "# ";
-    opacity: 0.5;
-}
-
-#icon {
-    width: 26px;
-}
-#icon.golang {
-    width: 32px;
-}
-
-/* NAV */
-header {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    margin-top: 10px;
-    z-index: 2;
-
-    color: aliceblue;
-    left: 12px;
-    nav {
-        background-color: #1a1b1c;
-    }
-
-     .nav-link {
-        color: aliceblue;
-    }
-
-     .nav-link:hover {
-        color: rgb(255, 240, 103);
-    }
-
-     .nav-link.active {
-        border-bottom: 2px solid rgb(255, 240, 103);
-    }
-    
-}
-.fundo {
-    position: fixed;
-    z-index: 1;
-    top: -20px;
-    height: 50px; 
-    width: 100%; 
-    background-color: #000000;
-    filter: blur(10px);
-    pointer-events: none;
-    opacity: 0.3;
-}
-
-
-/* MAIN  */
-.front {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: black;
+
+    font-family:  "Kanit", sans-serif;
     position: relative;
 
-     .hello {
-        color: aliceblue;
-        text-align: center;
-        z-index: 1;
-    }
-
-     .hello #top {
-        font-size: 60px;
-        font-weight: 400;
-        margin: 0;
-    }
-
-     .hello #down {
-        font-size: 30px;
-        font-weight: 300;
-        margin: 0;
-        margin-top: -20px;
-    }
-
-     .hello #top b {
-        color: rgb(255, 240, 103);
-    }
-
-     img {
-        filter: blur(2px);
-        opacity: 0.3;
-        position: absolute;
-        top: 0;
-        left: -150px;
-        width: 136.6%;
-        height: 100%;
-        object-fit: cover;
-        overflow-x: hidden;
-    }
+    text-align: center;
+    top: 10%;
+}
+#name {
+    font-size: 25px;
+}
+#role {
+    font-size: 17px;
+    margin: -15px;
+    color: var(--bs-secondary-color);
 }
 
-/* SOBRE MIM */
-#Aboutme {
+#picture {
+    width: 160px;
+    min-width: 120px;
+    max-width: 160px;
+    border-radius: 50%;
+}
+
+#contatos {
     display: flex;
-    border-bottom: 12px;
-    width: 90%;
+    position: relative;
+    margin-top: 30px;
     flex-direction: row;
-    align-items: center;
-    margin: 5%;
+    gap: 10px;
+}
 
-    background-color: #1d1e20;
+#github, #linkedIn, #instagram, .languages img {
+    position: relative;
+    background-color: var(--bs-body-color-rgb);
+    box-shadow: 0 4px 8px rgba(1, 1, 2, 0.3);
+    /* border: solid black 1px; */
+    padding: 5px;
+    border-radius: 20%;
+}
+#contatos img:hover {
+    transform: scale(1.1);
+}
+#linkedIn img, #github img , #instagram img {
+    width: 23px;
+    margin: 1.5px;
+}
 
-     p {
-        position: relative;
-        font-size: 145%;
-        font-weight: 300;
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-break: break-word;
-    }
-    
-     .img {
-        position: relative;
-        margin-right: 30px;
-    }
-
-     #image {
-        position: relative;
-        width: 410px;
-        top: 109%;
-        margin-left: 32px;
-    }
-} 
+/* SKILLS DIV  */
 
 .skills {
-    text-align: center;
-    width: 90%;
-    margin: 5%;
-    background-color: #1d1e20;
-
-     .title {
-        position: relative;
-        top: 12px;
-        margin: 20px;
-    }
-}
-
-.skills-body {
     display: flex;
-    justify-content: center; 
-    gap: 30px; 
-        
-     .languages {
-        display: flex;
-        flex-direction: row; 
-        gap: 12px; 
-    }
+    position: relative;
+    top: 15%;
+    width: 100%;
+    /* max-width: 390px; */
+    border-radius: 40px;
 
-     .language-item {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center;
-        margin: 12px;
-    }
-
-     .language-item img {
-        width: 80px; 
-        height: auto;
-    }
-
-     .language-item p {
-        margin: 8px 0 0;
-        font-size: 22px; 
-    }
+    background-color: #434343;
+}
+.skills p {
+    font-family:  "Kanit", sans-serif;
+    font-size: 1.21rem;
+    letter-spacing: 1px;
+    color: #ffff;
 }
 
-/* PROJETOS */
-.projetos {
+.display {
+    margin: 20px 20px 0 20px;
+}
+.languages {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 50px;
-    
-    .card {
-        background-color: #2f3237;
-        color: aliceblue;
-        width: 25rem;
-    }
-    .card-header {
-        display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.languages img {
+    width: 45px;
+    height: 49px;
+    background-color: #f8f9fc;
+    padding: 5px;
+    border-radius: 33%;
+
+    margin-bottom: 20px;
+}
+
+.education {
+    color: #f8f9fc;
+    font-family: "Kanit", sans-serif;
+    font-size: large;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+strong {
+    font-family: "europa", sans-serif;
+    letter-spacing: 1.2px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.projects, .education {
+    margin-bottom: 20px;
+}
+#subtitle::before {
+    content: "# ";
+    color: rgb(253, 224, 117);
+    opacity: 0.8;
+    font-size: 1.3rem;
+}
+
+.projects .card {
+    background-color: #f8f9fc;
+}
+.card {
+    margin: auto;
+}
+.button-pad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.card p {
+    color: #434343;
+}
+
+@media screen and (min-width: 996px) {
+    .container {
         flex-direction: row;
-    }
-    .icon {
-        margin-left: auto;
-    }
-    .card-text {
-        font-family: "Kanit", sans-serif;
-        margin: 10px;
-        font-size: medium;
-        width: 100%;
-    }
-    
-    button {
-        padding: 10px 10px;
-        font-size: medium;
-        margin: 15px;
         justify-content: space-between;
+        gap: 50px;
+        max-width: 900px !important;
+        padding: 30px;
+        box-shadow: none;
+        align-items: flex-start; 
+        margin: 20px ;
     }
-    .botoes {
+
+    .about {
         position: relative;
-        top: 10px;
+        top: 20px;
+        width: 30%;
+        padding: 20px; 
+        height: 100%; 
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: start; 
     }
-}
-
-/* CONTATO */
-#contato {
-    margin: 20px;
-    width: 31%;
-    
-    img {
-        width: 35px;
-        margin-left: 12px;
-        margin-right: 12px;
-    }
-
-    a {
+    .about-display {
         position: relative;
-        top: 5px;
-        font-size: 25px;
-    
-        text-decoration: none;
-        color: aliceblue;
-    }
-    
-     a:hover {
-        color: rgb(255, 239, 92);
-    }
+        top: -19px;
+        box-shadow: 0 4px 8px rgba(1, 1, 2, 0.3);
+        padding: 78px; 
 
-    .email, .linkedin {
-        margin-top: 12px;
     }
-
-}
-
-
-/* RESPONSIVIDADE */
-@media screen and (max-width: 914px) {
-    .projetos {
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 600px) {
-    body {
-        font-size: medium;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-    }
-
-    .hello #top {
-        font-size: 50px;
-    }
-
-    .hello #down {
-        top: 20px;
-        font-size: 25px;
-    }
-
-    .sobre p {
-        white-space: normal !important;
-        overflow-wrap: break-word !important;
-        word-break: break-word !important;
-    }
-
-    #Aboutme {
-        flex-direction: column;
-
-        #img {
-            position: relative;
-            width: 333px;
-        }
-    }
-    .skills-body {
+    .skills {
+        position: relative;
+        top: 20px; 
+        width: 65%;
+        border-radius: 2px;
+        height: 100%;
         display: flex;
-
-        gap: 0;
-         .languages {
-            flex-direction: column;
-        }
-         .language-item {
-            flex-direction: row;
-            gap: 20px;
-        }
-    }
-    .language-item img {
-        height: 12px;
-    }
-    
-    #contato {
-        width: 60%;
-        
-         .title {
-            width: auto;
-        }
-         a {
-            font-size: 20px;
-            left: 0px;
-        }
-         img {
-            width: 30px;
-        }
-         .email {
-            display: flex;
-            flex-direction: row;
-        }
-    }
-    .projetos {
         flex-direction: column;
-        gap: 30px;
-        margin-left: 86px;
-    }
-    .card{        
-        width: 20rem !important;
-        img {
-            margin: 0;
-            width: auto;
-        }
-         .col-md-3 {
-            position: relative;
-            width: 90%;
-            border-right: 50px;
-        }
-         .col-md-8 {
-            margin-top: 0 !important;
-        }
-         .card-body {
-            margin: 0 !important;
-             p {
-                font-size: medium;
-                margin-top: -10px;
-                margin-left: 12px;
-                text-align: left;
-            }
-             button {
-                margin: 12px !important;
-                align-items: center;
-            }
-        }
-         .card-header {
-            margin: 0;
-            
-        }
-    }
-    
-    .projetos {
-        margin-left: 49px;
-        .card-text {
-            top: 13px;
-            width: 100%;
-        }
+        justify-content: flex-start; /* Alinha o conteúdo ao topo */
     }
 
-}
-
-@media screen and (max-width:500px) {
-
-    .hello #down {
-        top: 20px;
-        font-size: 23px !important;
+    .languages {
+        gap: 20px;
     }
 
-    #Aboutme {
-        font-size: small;
+    .skills p {
+        font-size: 1.5rem;
     }
 
-    #image {
-        width: 337px !important;
-        margin-bottom: 20px;
+    .languages img {
+        width: 53px;
+        height: 55px;
     }
 
-    
-
+    .projects .card {
+        max-width: 400px;
+    }
 } 
-
-@media screen and (max-width:384px) {
-    #image {
-        transform: scale(0.9);
-        /* width: 286px !important; */
-        margin-bottom: 20px;
-    }
-
-    #contato h1 {
-        font-size: xx-large;
-        margin-left: 12px;
-    }
-    .title {
-        font-size: xx-large;
-    }
-    
-    .front img{
-        width: 139%;
-        overflow-y:visible;
-    }
-    
-    .projetos {
-        margin-left: 33.5px;
-    }
-    
-    button {
-        font-size: small;
-    }
-}
-
-
-@media screen and (max-width:360px) {
-    .nav {
-        font-size: small;
-    }
-    #image {
-        transform: scale(0.9);
-        /* width: 286px !important; */
-        margin-bottom: 20px;
-    }
-
-    #contato h1 {
-        font-size: xx-large;
-        margin-left: 12px;
-    }
-    .title {
-        font-size: xx-large;
-    }
-    
-    .front img{
-        width: 142.3%;
-        overflow-y:visible;
-    }
-    
-    .projetos {
-        margin-left: 21.3px;
-    }
-
-}
-
-
-
-
-
